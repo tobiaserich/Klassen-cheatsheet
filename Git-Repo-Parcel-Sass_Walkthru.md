@@ -17,35 +17,45 @@
 Add folder structure with
 `mkdir [foldername]`
 
-- mkdir src
-  > (cd) src
-- mkdir scss
-- mkdir components
-- mkdir pages
-  > (cd) scss
-- mkdir partials
+```
+mkdir src
+(cd) src
+mkdir scss
+mkdir components
+mkdir pages
+(cd) scss
+mkdir partials
+```
 
 Add files with
 `touch [filename.extension]`
 
 in root dir [= name of your repo]
 
-- touch .gitignore
-- touch README.md
-- touch .posthtmlrc
+```
+touch .gitignore
+touch README.md
+touch .posthtmlrc
+```
 
 in src dir
 
-- touch index.html
+```
+touch index.html
+```
 
 in scss dir
 
-- touch style.scss
+```
+touch style.scss
+```
 
 in scss/partials
 
-- touch \_global.scss
-- touch \_variables.scss
+```
+touch \_global.scss
+touch \_variables.scss
+```
 
 (order of creation doesn't matter)
 
@@ -70,15 +80,19 @@ IF still in terminal: Switch to VSCode with `code .` while inside the root folde
 4. Click "Refresh Explorer" in VSCode to see new files & folders
 5. Open .gitignore and add
 
-.DS-Store  
-.Cache  
-dist  
+```
+.DS-Store
+.Cache
+dist
 node_modules
+```
 
 6. Open package.json and add to "scripts" (you can replace the "test")
 
-"dev": "parcel src/_.html",  
+```
+"dev": "parcel src/_.html",
 "build": "parcel build src/_.html"
+```
 
 ## Configure the basics
 
@@ -90,12 +104,20 @@ node_modules
 
 3. Go to \_global.scss and add:
 
-`_, _::before, \*::after { box-sizing: border-box; }`
+```
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+```
 
 4. Go to style.scss and add:
 
-@import "partials/variables";  
+```
+@import "partials/variables";
 @import "partials/global";
+```
 
 5. Save changes with COMMAND + S
 
@@ -116,9 +138,11 @@ Go to root dir of new repo
 5. `git push` to finally upload your changes to github
 6. another `git status` to see everything is fine should say:
 
+```
 On branch master
 Your branch is up to date with 'origin/master'.
 
 nothing to commit, working tree clean
+```
 
 7. ENJOY your moment and then GET CREATIVE - **happy coding!**
